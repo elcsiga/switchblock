@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="view">
+  <div *ngIf="activeCollection$ | async as activeCollection; else noCollection">
+
+    <div *ngFor="let _switch of activeCollection.switches" class="card">
+      <mat-card>
+        <mat-slide-toggle class="toggle"
+                          [checked]="_switch.status === 'on'"
+                          (change)="toggleSwitch(activeCollection.id, _switch.id)"
+        ></mat-slide-toggle>
+
+        <div class="texts" (click) = "openDetails(activeCollection.id, _switch)">
+          <div class="title">{{_switch.name}}</div>
+          <div class="info">{{getInfo(_switch)}}</div>
+        </div>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <ng-template #noCollection>
+    <div class="teaser">
+      <h3>We’re selling switches that you can use to control your electric equipment remotely.</h3>
+    </div>
+    <div class="teaser">
+      <a routerLink="/login">Please log in to see your switches</a>
+    </div>
+  </ng-template>
+</div>
+
+
+

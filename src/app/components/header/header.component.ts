@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {activeCollectionSelector, State, User} from './@ngrx/reducers';
-import {Observable, Subscription} from 'rxjs';
-import {UserService} from './services/user/user.service';
+import {activeCollectionSelector, State, User} from '../../@ngrx/reducers';
+import {Observable} from 'rxjs';
+import {UserService} from '../../services/user/user.service';
 import {Router} from '@angular/router';
-import {SwitchService} from './services/switch/switch.service';
+import {SwitchService} from '../../services/switch/switch.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class AppComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   user$: Observable<User>;
   switches$: Observable<any>;
   activeCollection$: Observable<any>;

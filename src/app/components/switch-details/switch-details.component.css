@@ -1,0 +1,9 @@
+.toggle {
+  float: right;
+}
+
+.chip {
+  background-color: lightgray;
+  border-radius: 30px;
+  padding: 3px 12px;
+}

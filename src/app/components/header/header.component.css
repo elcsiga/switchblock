@@ -1,0 +1,16 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.icon {
+  vertical-align: -6px;
+}
+.collections {
+  margin: 0 30px;
+  font-size: .7em;
+}
+
+.combo {
+  margin: 0 50px;
+  font-size: .6em;
+}

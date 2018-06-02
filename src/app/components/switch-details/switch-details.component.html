@@ -1,0 +1,22 @@
+<mat-slide-toggle class="toggle"
+                  [checked]="data.switch.status === 'on'"
+                  (change)="toggleSwitch()"
+></mat-slide-toggle>
+
+<h2>{{data.switch.name}}</h2>
+
+<p>
+  {{data.switch.description}}
+</p>
+
+<p *ngFor="let row of data.switch.switchingHistory">
+  <span>
+    {{ row.turnOnTime | date:'short' }}
+    <span class="chip">On</span>
+  </span>
+
+  <span *ngIf="row.turnOffTime">
+    - {{ row.turnOnTime | date:'short' }}
+    <span class="chip">Off</span>
+  </span>
+</p>

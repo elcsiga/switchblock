@@ -1,0 +1,26 @@
+@import "../../../colors";
+
+.fullScreen{
+  width: 100vw;
+  height: 100vh;
+  background-color: $switchblock-darkblue;
+}
+.leftBar{
+  height: 100%;
+  background-color: $switchblock-lightblue;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 640px) {
+    width: 33%;
+    height: 100%;
+    margin-left: 67%;
+  }
+
+  button {
+    border-radius: 30px;
+    float: right;
+  }
+}

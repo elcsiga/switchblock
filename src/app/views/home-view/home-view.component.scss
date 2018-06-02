@@ -1,0 +1,30 @@
+.view {
+  padding: 10px;
+
+  .card {
+    margin: 10px;
+
+    @media screen and (min-width: 640px) {
+      width: calc( 33% - 20px );
+      display: inline-block;
+    }
+
+    .toggle {
+      float: right;
+    }
+
+    .texts {
+      cursor: pointer;
+      .info {
+        font-size: .6em;
+      }
+    }
+  }
+}
+
+
+.teaser {
+  margin: 50px auto;
+  max-width: 300px;
+
+}
